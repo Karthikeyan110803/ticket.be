@@ -1,0 +1,12 @@
+package com.example.demo.model;
+
+public class Ticket {
+	public int id;
+	public String Name;
+	public String Emailaddress;
+	public String Password;
+	public String Confirmpassword;
+	
+	
+
+}

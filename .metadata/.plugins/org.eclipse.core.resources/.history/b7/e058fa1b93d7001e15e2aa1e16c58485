@@ -1,0 +1,39 @@
+package com.example.demo.model;
+
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+@Entity
+@Table(name="students")
+public class student {
+		private String studentid;
+		private String name;
+		private String gender;
+		@ManyToOne
+		@JoinColumn(name="staffid")
+		@JsonIgnore
+		private staff staff;
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public String getGender() {
+			return gender;
+		}
+		public void setGender(String gender) {
+			this.gender = gender;
+		}
+		public String getId() {
+			return studentid;
+		}
+		public void setId(String id) {
+			this.studentid = studentid;
+		}
+}
